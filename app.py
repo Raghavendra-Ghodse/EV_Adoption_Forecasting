@@ -18,7 +18,7 @@ st.set_page_config(
 
 # <<< NEW: Configure Gemini API ---
 try:
-    genai.configure(api_key=st.secrets["GOOGLE_API_KEY"])
+    genai.configure(api_key="AIzaSyCf1bHyJYDp36APSHb_2i489SvC0oPAiis")
     model_gen = genai.GenerativeModel('gemini-2.5-flash')
 except Exception as e:
     st.error(f"Error configuring Gemini API. Make sure your GOOGLE_API_KEY is in secrets.toml. Error: {e}")
@@ -322,3 +322,4 @@ if prompt := st.chat_input("Ask a question about the forecast..."):
                 
             except Exception as e:
                 st.error(f"Error communicating with the model: {e}")
+
